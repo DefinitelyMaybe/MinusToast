@@ -1,0 +1,35 @@
+﻿{
+	"type": "EffectGroup",
+	"name": "Fireball:OnContact",
+	
+	"effects": [
+		{
+			"effectScript": "HandlerStop"
+		},
+		{
+			"effectScript": "HandlerEffect",
+			"callback": [
+				{
+					"effectScript": "TargetPlayEmitter",
+					"name": "Magic FireBall Explosion Emitter"
+				},
+				{
+					"effectScript": "TargetPlaySound",
+					"name": "FireballExplosion",
+					"minDist": 10,
+					"maxDist": 100
+				}
+			]
+		},
+		{
+			"effectScript": "ApplyImpulse",
+		}
+		{
+			"effectScript": "Sleep",
+			"time": 0.25
+		},
+		{
+			"effectScript": "RemoveProjectile",
+		}
+	]
+}

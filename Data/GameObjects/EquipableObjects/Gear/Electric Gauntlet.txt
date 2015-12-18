@@ -2,7 +2,7 @@
 {
 	PlaceableObject
 	{
-		Test Gauntlet
+		Electric Gauntlet
 		{
 			Tag = "Gear"
 			
@@ -11,8 +11,8 @@
 			}
 			Script
 			{
-				file = "Scripts/Objects/TestGauntlet.lua"
-				class = "TestGauntlet"
+				file = "Scripts/Objects/ElectricGauntlet.lua"
+				class = "ElectricGauntlet"
 				
 				arguments
 				{
@@ -108,7 +108,7 @@
 
 			Placeable
 			{
-				name = "Teleball Neuria Gauntlet"
+				name = "Electric Neuria Gauntlet"
 				icon = "fireball_neuria_Gauntlet_icon"
 				minScale = 1.0
 				maxScale = 1.0
