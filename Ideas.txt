@@ -8,7 +8,20 @@ Aditional: Make a bunch of early game clay objects.
 ----------------------------------------------------------------------
 3 - Remaking the early survival stage such that you don't start with a belt.
 ----------------------------------------------------------------------
-4 - Editing the Survival GUI to look more like a Hack 'n' Slash or a MOBA.
+4 - Miners hat
 ----------------------------------------------------------------------
-5 - Camera Position when crouched in relation to shadows cast and head position.
+5 - Attractor to pull/push characters (Think of the Thaumic Thinkerer attractor block)
 ----------------------------------------------------------------------
+6 - Electric projectile, when in stance it pulls electricity from the air and the more it got, the stronger the projectiel will be. The projectile will paralyse the hit objects. (Or around the object it’ll make a event area thing)
+----------------------------------------------------------------------
+7 - Moving storage (follows you)
+----------------------------------------------------------------------
+8 - Teleport rod (Think of Ender IO)
+----------------------------------------------------------------------
+9 - Boomerang
+----------------------------------------------------------------------
+10 - Editing the Survival GUI to look more like a Hack 'n' Slash or a MOBA.
+----------------------------------------------------------------------
+11 - Camera Position when crouched in relation to shadows cast and head position.
+----------------------------------------------------------------------
+12 -
