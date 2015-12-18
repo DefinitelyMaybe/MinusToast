@@ -1,0 +1,47 @@
+Teleball
+{
+
+	Handlers
+	{
+		Trajectory
+		{
+			handlerClass = "HandlerTrajectory"
+			arguments
+			{
+				speed = 40.0
+				acceleration = <0.0, 0.0, 0.0>
+				contactProbeLength = 1.3
+			}
+		}
+		Attached
+		{
+			handlerClass = "HandlerAttached"
+			arguments
+			{
+				speed = 0.5
+				offset = <2.0, 0.0, 0.0>
+			}
+		}
+		Homing
+		{
+			handlerClass = "HandlerBoomerang"
+			arguments
+			{
+				speed = 0.25
+				offset = <0.0, 0.0, 0.0>
+			}
+		}
+	}
+	
+	Events
+	{
+	OnContact
+		{
+			Impulse
+			{
+				jsonFile = "Data/Effects/Projectiles/TestProjectile/OnContact.json"
+			}
+		}
+	}
+	
+}

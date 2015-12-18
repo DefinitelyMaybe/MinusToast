@@ -1,0 +1,106 @@
+﻿
+GameObjects
+{
+
+	PlaceableObject
+	{
+
+		Test Projectile
+		{
+			Transform
+			{
+			}
+			
+			Script
+			{
+				file = "Scripts/Objects/TestProjectile.lua"
+				class = "TestProjectile"
+				arguments
+				{
+				
+					CreakingSound = "ItemCreak"
+					BreakSound = "ItemBreak"
+					
+					#DontInitilize = 1
+					
+					#DeleteOnRestore = 1
+				}
+			}
+
+			Equipable
+			{
+				name = "Test Projectile"
+				//icon = "crystalClusterRuby"
+				minScale = 1.0
+				maxScale = 1.0
+				miningEmitter = "Slingshot Stone Break Emitter"
+				category = "Weapon"
+				tier = 3
+				damageToCharacters = 19
+				damageToObjects = 7
+				impactFailSound = "MetalDig"
+				weaponRange = 7.0
+				maxStackCount = 100
+				--resource = 1
+				handleType = "one"
+			}
+			
+			StaticGraphics
+			{
+				model = "Character/Weapons/fireball.obj"
+				dontCastShadows = 1.0
+				
+				Diffuse
+				{
+					"stone" = "Character/Weapons/slingshot_diff.tga"
+				}
+				Normal
+				{
+					"stone" = "Character/Weapons/slingshot_norm.tga"
+				}
+			}
+			
+			Physics
+			{
+				Colliders
+				{
+					Sphere
+					{
+						radius = 0.5
+					}
+
+					Sphere
+					{
+						trigger = 1
+						radius = 2.0
+						material = "TRIGGER_BROAD"
+					}
+				}
+			}
+			
+			Light
+			{
+				lightRadius = 0.01
+				lightOffset = <0.0, 0.0, 0.0>
+				lightColor = <0.0, 0.0, 0.0>
+			}
+			
+			Children
+			{
+				Magic FireBall Emitter
+				{
+					offset = <0.0, 0.0, 0.0>
+				}
+				FireBall Attractor
+				{
+					offset = <0.0, 0.0, 0.0>
+					emitter = "Magic FireBall Emitter"
+				}
+				Magic FireBall Trail Emitter
+				{
+					offset = <0.0, 0.0, 0.0>
+				}
+			}
+		}
+	}
+}
