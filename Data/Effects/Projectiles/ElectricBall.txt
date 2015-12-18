@@ -1,4 +1,4 @@
-Teleball
+ElectricBall
 {
 
 	Handlers
@@ -39,7 +39,7 @@ Teleball
 		{
 			Impulse
 			{
-				jsonFile = "Data/Effects/Projectiles/TestProjectile/OnContact.json"
+				jsonFile = "Data/Effects/Projectiles/ElectricBall/OnContact.json"
 			}
 		}
 	}

@@ -1,0 +1,128 @@
+
+{
+	PlaceableObject
+	{
+		Test Gauntlet
+		{
+			Tag = "Gear"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/TestGauntlet.lua"
+				class = "TestGauntlet"
+				
+				arguments
+				{
+					category = "Gear"
+					slot = "Hands"
+					incorrectTierCap = 3
+					encumbrance = 0.9
+					equipSound = "MetalDig"
+					
+					#emptyContainer = "Bronze Plated Glove"
+					energyUsed = 0
+					spellName = "Teleball"
+					spellIcon = "TUGIcons/telespell_icon"
+					
+					castingSound = "FireballCast"
+					endCastingSound = "FireballEndCast"
+					noEnergySound = "StaminaOut"
+					noEnergyEmitter = "No Magic Fire Emitter"
+					stoneBreakEmitter = "Stone Break Fire Emitter"
+					
+					dataMetricCategory = "Hands"
+					UBPcraft = 8
+					LBPcraft = 8
+					XPcraft = 16
+					
+					Projectile
+					{
+						name = "Teleball Projectile"
+					}
+
+					swinganimations
+					{
+						"ItemVSwing"
+					}
+
+					AppearenceRules
+					{
+						"Left Arm"
+						{
+							submesh = "default"
+							priority = 2.0
+						}
+						"Left Hand"
+						{
+							submesh = "Geo_L_Hand_FireGauntlet01"
+							priority = 1.0
+						}
+					}
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Refined/fireball_neuria_Gauntlet.obj"
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Refined/fireball_neuria_Gauntlet.tga"
+					1 = "Models/PlaceableObjects/Refined/bronze_glove_Plate_diff.tga"
+					2 = "Models/PlaceableObjects/Refined/gauntlet_active_Stone_new_diff.tga"
+				}
+				Glow
+				{
+					2 = "Models/PlaceableObjects/Refined/gauntlet_active_Stone_glow.tga"
+				}
+				Normal
+				{
+					#0 = "Models/PlaceableObjects/Refined/bronze_plated_Glove_norm.tga"
+					#1 = "Models/PlaceableObjects/Refined/bronze_glove_Plate_norm.tga"
+				}
+			}
+			#RigidBody
+			#{
+			#	activePhysics = 1
+			#	mass = 5.0
+			#	friction = 100.0
+			#}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 10.0
+						convex = 0
+						material = "WOOD"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+
+			Placeable
+			{
+				name = "Teleball Neuria Gauntlet"
+				icon = "fireball_neuria_Gauntlet_icon"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Metal"
+				tier = 3
+				#health = 6
+				#durabilityLossOnCorrect = 2.0
+				#durabilityLossOnIncorrect = 8.0
+				resource = 1
+				maxStackCount = 1.0
+				
+				placementSound = "MetalDig"
+			}
+		}
+	}
+}
