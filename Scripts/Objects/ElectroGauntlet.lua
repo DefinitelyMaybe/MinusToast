@@ -2,6 +2,9 @@ include("Scripts/Objects/Gauntlet.lua")
 
 ElectroGauntlet = Gauntlet.Subclass("ElectroGauntlet")
 
+--[[ElectroGauntlet.Models = {}
+ElectroGauntlet.Models[1] = NKLoadStaticModel("Data/eyes.txt")--]]
+
 ElectroGauntlet.Effect = {
 	"Projectiles/ElectroProjectile.txt"
 }
@@ -31,7 +34,7 @@ function ElectroGauntlet:GearPrimaryAction(args)
 		local projectileData = self:GetProjectileData()
 		local facingRot = GLM.Angle(args.direction, NKMath.Right)
 		local temp = self.m_offset:mul_quat(facingRot)
-		local effect = Eternus.GameObjectSystem:NKCreateNetworkedGameObject("Electro Ball", true, true, effectArgs):NKGetInstance()
+		local effect = Eternus.GameObjectSystem:NKCreateNetworkedGameObject("Electro Projectile", true, true, effectArgs)
 		
 		effect:NKSetPosition(args.positionW + temp)
 		effect:NKSetOrientation(GLM.Angle(args.direction, NKMath.Up))
@@ -72,7 +75,7 @@ end
 
 -------------------------------------------------------------------------------
 function ElectroGauntlet:Update( dt )
-	ElectroGauntlet.__super.PostLoad(self, dt)
+	ElectroGauntlet.__super.Update(self, dt)
 	
 	if self.m_charging then
 		
@@ -81,7 +84,7 @@ end
 
 -------------------------------------------------------------------------------
 function ElectroGauntlet:ServerEvent_Aim(args)
-	ElectroGauntlet.__super.PostLoad(self, args)
+	ElectroGauntlet.__super.ServerEvent_Aim(self, args)
 	
 	--self:NKActivateEmitterByName("")
 	self.m_charging = true

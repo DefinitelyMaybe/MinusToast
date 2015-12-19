@@ -26,6 +26,7 @@
 					energyUsed = 15
 					spellName = "Electro"
 					spellIcon = "TUGIcons/firespell_icon"
+					
 					#These are from Ice Neuria Gaunlet and I thought they might be helpful
 					#persistent = 1
 					#amount of time between ticks
