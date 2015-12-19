@@ -1,13 +1,13 @@
---include("Scripts/Interactable.lua")
+include("Scripts/Gauntlet.lua")
 
-ElectroGauntlet = EternusEngine.Mixin.Subclass("ElectroGauntlet")
+ElectroGauntlet = EternusEngine.Gauntlet.Subclass("ElectroGauntlet")
 
 --[[ElectroGauntlet.Models = {}
 ElectroGauntlet.Models[1] = NKLoadStaticModel("Data/eyes.txt")--]]
 
---ElectroGauntlet.Effect = {
---	"Projectiles/ElectroProjectile.txt"
---}
+ElectroGauntlet.Effect = {
+	"Projectiles/ElectroProjectile.txt"
+}
 
 
 function ElectroGauntlet:PostLoad(dt) 
@@ -16,8 +16,6 @@ end
 
 -------------------------------------------------------------------------------
 function ElectroGauntlet:Constructor(args)
-	ElectroGauntlet.__super.Constructor(self, args)
-	
 	self.m_id = 1
 	self.m_charging = false
 end
@@ -84,7 +82,7 @@ function ElectroGauntlet:GearPrimaryAction(args)
 end
 
 -------------------------------------------------------------------------------
-function Gauntlet:Update( dt )
+function ElectroGauntlet:Update( dt )
 	ElectroGauntlet.__super.PostLoad(self, dt)
 	
 	if self.m_charging then
@@ -93,7 +91,7 @@ function Gauntlet:Update( dt )
 end
 
 -------------------------------------------------------------------------------
-function Gauntlet:ServerEvent_Aim(args)
+function ElectroGauntlet:ServerEvent_Aim(args)
 	ElectroGauntlet.__super.PostLoad(self, args)
 	
 	--self:NKActivateEmitterByName("")

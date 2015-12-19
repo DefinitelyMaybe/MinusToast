@@ -11,8 +11,8 @@
 			}
 			Script
 			{
-				file = "Scripts/Objects/Gauntlet.lua"
-				class = "Gauntlet"
+				file = "Scripts/Objects/ElectroGauntlet.lua"
+				class = "ElectroGauntlet"
 				
 				arguments
 				{
