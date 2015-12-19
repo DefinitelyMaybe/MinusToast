@@ -6,7 +6,7 @@ ElectroGauntlet = Gauntlet.Subclass("ElectroGauntlet")
 ElectroGauntlet.Models[1] = NKLoadStaticModel("Data/eyes.txt")--]]
 
 ElectroGauntlet.Effect = {
-	"Projectiles/ElectroProjectile.txt"
+	"Projectiles/Electro.txt"
 }
 
 
@@ -49,7 +49,7 @@ function ElectroGauntlet:GearPrimaryAction(args)
 			offset = projectileData.m_offset,
 			source = player,
 		}
-		effect:Fire(throwablePayload, args.direction, 18)
+		effect:Fire(throwablePayload, args.direction, 15)
 		
 		-- type is persistent, set currentProjectile
 		if self.m_persistent then

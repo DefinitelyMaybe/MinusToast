@@ -8,7 +8,7 @@ Electro
 			handlerClass = "HandlerTrajectory"
 			arguments
 			{
-				speed = 40.0
+				speed = 20.0
 				acceleration = <0.0, 0.0, 0.0>
 				contactProbeLength = 1.3
 			}
@@ -19,10 +19,7 @@ Electro
 	{
 		OnContact
 		{
-			Impulse
-			{
-				jsonFile = "Data/Effects/Projectiles/Electro/OnContact.json"
-			}
+			
 		}
 	}
 }

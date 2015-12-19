@@ -39,9 +39,11 @@ function ElectroProjectile:Stop()
 	end
 end
 
+-------------------------------------------------------------------------------
 function ElectroProjectile:NetSerializeConstruction( stream )
 end
 
+-------------------------------------------------------------------------------
 function ElectroProjectile:NetDeserializeConstruction( stream )
 end
 
