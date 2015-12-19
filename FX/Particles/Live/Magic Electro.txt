@@ -1,0 +1,73 @@
+﻿
+Particles
+{
+
+	Magic Electro Ball01
+	{
+		textureName = "FX/Textures/ElectroBall.png"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <0.75, 0.75, 0.97>
+		rotationSpeed = 95.0
+		scaling = <1.0,1.0,1.0>
+		scalingSpeed = <1.5, 1.5, 1.5>
+		scalingType = "multiply"
+		scalingVariance = 1.5
+		acceleration = <0.0, 2, 0.0>
+		maxAge = 1
+		ageVariance = 0.2
+		ageToStartFading = 0.9
+		ageToStartShrinking = 0
+		blendType = "additive"
+		fadeInAge = 0.1
+		growInAge = 0.3
+		speedCap = 100
+	}
+
+	#No Magic Ice01
+	#{
+	#	textureName = "FX/Textures/iceShards04.tga"
+	#	textureSize = 256
+	#	elasticity = 0.0
+	#	addColor = <0.0, 0.0, 0.0>
+	#	multiplyColor = <0.75, 0.75, 0.97>
+	#	rotationSpeed = -95.0
+	#	scaling = <0.2, 0.2, 0.2>
+	#	scalingSpeed = <0.3, 0.3, 0.3>
+	#	scalingType = "multiply"
+	#	scalingVariance = 0.9
+	#	acceleration = <0.0, 2, 0.0>
+	#	maxAge = 0.4
+	#	ageVariance = 0.2
+	#	ageToStartFading = 0.2
+	#	ageToStartShrinking = 0
+	#	blendType = "additive"
+	#	fadeInAge = 0.4
+	#	growInAge = 0.3
+	#	speedCap = 100
+	#}
+
+	#Magic Frost Steam 01
+	#{
+	#	textureName = "FX/Textures/puff1.tga"
+	#	textureSize = 256
+	#	elasticity = 0.0
+	#	addColor = <0.0, 0.0, 0.0>
+	#	multiplyColor = <0.35, 0.35, 0.79>
+	#	rotationSpeed = 195.0
+	#	scaling = <1.2,1.2,1.2>
+	#	scalingSpeed = <1.4, 1.4, 1.4>
+	#	scalingType = "multiply"
+	#	scalingVariance = 2.2
+	#	acceleration = <0.0, 2, 0.0>
+	#	maxAge = 1.1
+	#	ageVariance = 0.2
+	#	ageToStartFading = 0.2
+	#	ageToStartShrinking = 0
+	#	blendType = "additive"
+	#	fadeInAge = 8.1
+	#	growInAge = 0.3
+	#	speedCap = 100
+	#}
+}
