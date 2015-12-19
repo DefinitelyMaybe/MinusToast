@@ -1,15 +1,4 @@
 --MinusToast
-include("Scripts/Objects/Gauntlet.lua")
-include("Scripts/Mixins/ElectroGauntlet.lua")
-
-local GauntletConstructor = Gauntlet.Constructor
-
-Gauntlet.Constructor = function(self, args)
-	GauntletConstructor(self, args)
-	if self:NKGetName() == "Electro Neuria Gauntlet" then
-		self:Mixin(ElectroGauntlet, args)
-	end
-end
 
 -------------------------------------------------------------------------------
 if MinusToast == nil then

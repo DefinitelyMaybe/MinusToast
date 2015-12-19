@@ -1,9 +1,6 @@
-include("Scripts/Gauntlet.lua")
+include("Scripts/Objects/Gauntlet.lua")
 
-ElectroGauntlet = EternusEngine.Gauntlet.Subclass("ElectroGauntlet")
-
---[[ElectroGauntlet.Models = {}
-ElectroGauntlet.Models[1] = NKLoadStaticModel("Data/eyes.txt")--]]
+ElectroGauntlet = Gauntlet.Subclass("ElectroGauntlet")
 
 ElectroGauntlet.Effect = {
 	"Projectiles/ElectroProjectile.txt"
@@ -19,14 +16,6 @@ function ElectroGauntlet:Constructor(args)
 	self.m_id = 1
 	self.m_charging = false
 end
-
--------------------------------------------------------------------------------
---function ElectroGauntlet:Interact(args)
---	self.m_id = next(ElectroGauntlet.Effect, self.m_id) or 1
---	
---	local str = "Using Effect Test: " .. ElectroGauntlet.Effect[self.m_id]
---	args.player:SendChatMessage(str)
---end
 
 -------------------------------------------------------------------------------
 function ElectroGauntlet:GearPrimaryAction(args)
