@@ -70,4 +70,189 @@ Particles
 	#	growInAge = 0.3
 	#	speedCap = 100
 	#}
+	
+	Magic Electrified Seed01
+	{
+		textureName = "FX/Textures/lightning01.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 10.0
+		scaling = <0.3, 0.3, 0.3>
+		scalingSpeed = <0.3, 0.3, 0.3>
+		scalingType = "multiply"
+		scalingVariance = 3.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.35
+		ageVariance = 0.15
+		ageToStartFading = 0.30
+		ageToStartShrinking = 0
+		fadeInAge = 0.3
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 100.0
+		orientation = "normal"
+	}
+	Magic Electrified Seed02
+	{
+		textureName = "FX/Textures/lightning02.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = -10.0
+		scaling = <0.3, 0.3, 0.3>
+		scalingSpeed = <0.3, 0.3, 0.3>
+		scalingType = "multiply"
+		scalingVariance = 3.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.35
+		ageVariance = 0.15
+		ageToStartFading = 0.30
+		ageToStartShrinking = 0
+		fadeInAge = 0.3
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 100.0
+		orientation = "normal"
+	}
+	Magic Electrified Seed03
+	{
+		textureName = "FX/Textures/lightning03.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 10.0
+		scaling = <0.3, 0.3, 0.3>
+		scalingSpeed = <0.3, 0.3, 0.3>
+		scalingType = "multiply"
+		scalingVariance = 3.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.35
+		ageVariance = 0.15
+		ageToStartFading = 0.30
+		ageToStartShrinking = 0
+		fadeInAge = 0.3
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 100.0
+		orientation = "normal"
+	}
+	Magic Electrified Seed04
+	{
+		textureName = "FX/Textures/lightning01.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 20.0
+		scaling = <0.9, 0.9, 0.9>
+		scalingSpeed = <0.4, 0.3, 0.3>
+		scalingType = "multiply"
+		scalingVariance = 3.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.35
+		ageVariance = 0.15
+		ageToStartFading = 0.30
+		ageToStartShrinking = 0
+		fadeInAge = 0.3
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 100.0
+		orientation = "normal"
+	}
+	Magic Electrified Seed05
+	{
+		textureName = "FX/Textures/lightning02.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = -20.0
+		scaling = <0.9, 0.9, 0.9>
+		scalingSpeed = <0.3, 0.3, 0.3>
+		scalingType = "multiply"
+		scalingVariance = 3.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.35
+		ageVariance = 0.15
+		ageToStartFading = 0.30
+		ageToStartShrinking = 0
+		fadeInAge = 0.3
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 100.0
+		orientation = "normal"
+	}
+	Magic Electrified Seed06
+	{
+		textureName = "FX/Textures/lightning03.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 20.0
+		scaling = <0.9, 0.9, 0.9>
+		scalingSpeed = <0.3, 0.3, 0.3>
+		scalingType = "multiply"
+		scalingVariance = 3.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.35
+		ageVariance = 0.15
+		ageToStartFading = 0.30
+		ageToStartShrinking = 0
+		fadeInAge = 0.3
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 100.0
+		orientation = "normal"
+	}
+	Magic Electrified01
+	{
+		textureName = "FX/Textures/lightningSpark.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 0.25
+		scaling = <1.5, 1.5, 1.5>
+		scalingSpeed = <0.7, 0.7, 0.7>
+		scalingType = "multiply"
+		scalingVariance = 0
+		acceleration = <0, 0, 0>
+		maxAge = 1.75
+		ageVariance = .75
+		ageToStartFading = 1.2
+		ageToStartShrinking = -.5
+		fadeInAge = 0.1
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 100
+		orientation = "normal"
+	}
+	Magic Electrified02
+	{
+		textureName = "FX/Textures/puff_smoke.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 195.0
+		scaling = <12.0,12.0,12.0>
+		scalingSpeed = <4.5, 4.5, 4.5>
+		scalingType = "multiply"
+		scalingVariance = 2.5
+		acceleration = <0.0, 2, 0.0>
+		maxAge = 1.2
+		ageVariance = 0.2
+		ageToStartFading = 0.9
+		ageToStartShrinking = 0
+		fadeInAge = 0.1
+		growInAge = 0.3
+		blendType = "default"
+		speedCap = 100
+		orientation = "normal"
+	}
 }

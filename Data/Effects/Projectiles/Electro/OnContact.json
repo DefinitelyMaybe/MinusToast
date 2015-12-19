@@ -22,7 +22,15 @@
 			]
 		},
 		{
-			"effectScript": "ApplyImpulse",
+			"effectScript": "TargetBuff",
+			"class": "StunBuff",
+				"Data": { 
+					"duration": 5,
+					"value": 0.0,
+					"stacks": false
+				},
+				"players": true,
+				"characters": true
 		}
 		{
 			"effectScript": "Sleep",

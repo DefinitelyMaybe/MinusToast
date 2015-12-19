@@ -27,5 +27,138 @@
 			{
 			}
 		}
+		
+		Magic Electrified Seed Emitter
+		{
+			Emitter
+			{
+				endless
+				type = "Drift"
+
+				Magic Electrified Seed01
+				{
+					rate = 19
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 4.5f, 0.0f>
+					velocityVariance = <1.6f, 2.4f, 1.6f>
+					rotation = 0
+					rotationVariance = 0
+					type = "spherical"
+					radius = 1.5
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+				Magic Electrified Seed02
+				{
+					rate = 19
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 4.5f, 0.0f>
+					velocityVariance = <1.6f, 2.4f, 1.6f>
+					rotation = 0
+					rotationVariance = 0
+					type = "spherical"
+					radius = 1.5
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+				Magic Electrified Seed03
+				{
+					rate = 21
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 4.5f, 0.0f>
+					velocityVariance = <1.6f, 2.4f, 1.6f>
+					rotation = 0
+					rotationVariance = 0
+					type = "spherical"
+					radius = 1.5
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+				Magic Electrified Seed04
+				{
+					rate = 8
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 5.0f, 0.0f>
+					velocityVariance = <1.3f, 1.4f, 1.3f>
+					rotation = 0
+					rotationVariance = 0
+					type = "spherical"
+					radius = 0.6
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+				Magic Electrified Seed05
+				{
+					rate = 8
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 5.0f, 0.0f>
+					velocityVariance = <1.3f, 1.4f, 1.3f>
+					rotation = 0
+					rotationVariance = 0
+					type = "spherical"
+					radius = 0.6
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+				Magic Electrified Seed06
+				{
+					rate = 9
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 5.0f, 0.0f>
+					velocityVariance = <1.3f, 1.4f, 1.3f>
+					rotation = 0
+					rotationVariance = 0
+					type = "spherical"
+					radius = 0.6
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+				Magic Electrified01
+				{
+					rate = 10
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 5.0f, 0.0f>
+					velocityVariance = <1.3f, 1.4f, 1.3f>
+					rotation = 180
+					rotationVariance = 360
+					type = "spherical"
+					radius = 1.0
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+				Magic Electrified02
+				{
+					rate = 3
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 8.0f, 0.0f>
+					velocityVariance = <1.3f, 1.4f, 1.3f>
+					rotation = 180
+					rotationVariance = 360
+					type = "spherical"
+					radius = 1.0
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+			}
+			Transform
+			{
+			}
+		}
 	}
 }
