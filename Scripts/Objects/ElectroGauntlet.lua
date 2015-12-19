@@ -9,6 +9,12 @@ ElectroGauntlet.Effect = {
 	"Projectiles/Electro.txt"
 }
 
+ElectroGauntlet.RegisterScriptEvent("ClientEvent_Channeling",
+	{
+		player = "gameobject",
+		charges = "int"
+	}
+)
 
 function ElectroGauntlet:PostLoad(dt) 
 	ElectroGauntlet.__super.PostLoad(self, dt)
@@ -25,7 +31,7 @@ function ElectroGauntlet:GearPrimaryAction(args)
 	if ElectricGauntlet_DEBUGGING then
 		NKWarn(">> [ElectroGauntlet] ElectroGauntlet:GearPrimaryAction() " .. (self.m_player and "has Player" or "Missing Player") )
 	end
-	local player = args.player:NKGetInstance()
+	local player = args.player
 	
 	-- Check stance 
 	if player:InCastingStance() and (not self.m_persistent or not self.m_currentProjectile) then
@@ -49,7 +55,7 @@ function ElectroGauntlet:GearPrimaryAction(args)
 			offset = projectileData.m_offset,
 			source = player,
 		}
-		effect:Fire(throwablePayload, args.direction, 15)
+		self.effect:Fire(throwablePayload, args.direction, 15)
 		
 		-- type is persistent, set currentProjectile
 		if self.m_persistent then
@@ -78,7 +84,10 @@ function ElectroGauntlet:Update( dt )
 	ElectroGauntlet.__super.Update(self, dt)
 	
 	if self.m_charging then
-		
+		--local currentScale = effect:NKGetScale()
+		--if currentScale > 2.5 then
+		--	effect:NKScale(currentScale + 0.5)
+		--end
 	end
 end
 
@@ -86,7 +95,7 @@ end
 function ElectroGauntlet:ServerEvent_Aim(args)
 	ElectroGauntlet.__super.ServerEvent_Aim(self, args)
 	
-	--self:NKActivateEmitterByName("")
+	self:NKActivateEmitterByName("Magic Electro Ball Emitter")
 	self.m_charging = true
 end
 

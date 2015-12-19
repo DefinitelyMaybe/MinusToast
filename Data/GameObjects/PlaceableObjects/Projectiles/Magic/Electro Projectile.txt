@@ -31,7 +31,7 @@ GameObjects
 				name = "Electro Projectile"
 				//icon = "crystalClusterRuby"
 				minScale = 1.0
-				maxScale = 1.0
+				maxScale = 2.5
 				category = "Weapon"
 				resource = 1
 				tier = 3
@@ -89,7 +89,7 @@ GameObjects
 			
 			Children
 			{
-				Magic FireBall Emitter
+				Magic Electro Ball Emitter
 				{
 					offset = <0.0, 0.0, 0.0>
 				}
