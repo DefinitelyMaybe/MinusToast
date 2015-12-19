@@ -1,38 +1,45 @@
-include("Scripts/Objects/Gauntlet.lua")
+include("Scripts/Interactable.lua")
 
--------------------------------------------------------------------------------
-ElectricGauntlet = Gauntlet.Subclass("ElectricGauntlet")
+ElectroGauntlet = EternusEngine.Mixin.Subclass("ElectroGauntlet")
 
---[[ElectricGauntlet.Models = {}
-ElectricGauntlet.Models[1] = NKLoadStaticModel("Data/eyes.txt")--]]
+--[[ElectroGauntlet.Models = {}
+ElectroGauntlet.Models[1] = NKLoadStaticModel("Data/eyes.txt")--]]
 
-ElectricGauntlet.Effect = {
-	"Projectiles/ElecProj.txt"
+ElectroGauntlet.Effect = {
+	"Projectiles/ElectroProjectile.txt"
 }
 
 
-function ElectricGauntlet:PostLoad(dt) 
-	ElectricGauntlet.__super.PostLoad(self, dt)
+function ElectroGauntlet:PostLoad(dt) 
+	ElectroGauntlet.__super.PostLoad(self, dt)
 end
 
 -------------------------------------------------------------------------------
-function ElectricGauntlet:Constructor(args)
-	ElectricGauntlet.__super.Constructor(self, args)
+function ElectroGauntlet:Constructor(args)
+	ElectroGauntlet.__super.Constructor(self, args)
 	
 	self.m_id = 1
 	self.m_charging = false
 end
 
 -------------------------------------------------------------------------------
-function ElectricGauntlet:GearPrimaryAction(args)
+function TestGauntlet:Interact(args)
+	self.m_id = next(TestGauntlet.Effect, self.m_id) or 1
+	
+	local str = "Using Effect Test: " .. TestGauntlet.Effect[self.m_id]
+	args.player:SendChatMessage(str)
+end
+
+-------------------------------------------------------------------------------
+function ElectroGauntlet:GearPrimaryAction(args)
 	if ElectricGauntlet_DEBUGGING then
-		NKWarn(">> [ElectricGauntlet] ElectricGauntlet:GearPrimaryAction() " .. (self.m_player and "has Player" or "Missing Player") )
+		NKWarn(">> [ElectroGauntlet] ElectroGauntlet:GearPrimaryAction() " .. (self.m_player and "has Player" or "Missing Player") )
 	end
 	local player = args.player:NKGetInstance()
 	
 	-- Check stance 
 	if player:InCastingStance() and (not self.m_persistent or not self.m_currentProjectile) then
-		local effectArgs = NKParseFile( "Data/Effects/".. ElectricGauntlet.Effect[self.m_id] )
+		local effectArgs = NKParseFile( "Data/Effects/".. ElectroGauntlet.Effect[self.m_id] )
 		
 		local projectileData = self:GetProjectileData()
 		local facingRot = GLM.Angle(args.direction, NKMath.Right)
@@ -78,7 +85,7 @@ end
 
 -------------------------------------------------------------------------------
 function Gauntlet:Update( dt )
-	ElectricGauntlet.__super.PostLoad(self, dt)
+	ElectroGauntlet.__super.PostLoad(self, dt)
 	
 	if self.m_charging then
 		
@@ -87,11 +94,11 @@ end
 
 -------------------------------------------------------------------------------
 function Gauntlet:ServerEvent_Aim(args)
-	ElectricGauntlet.__super.PostLoad(self, args)
+	ElectroGauntlet.__super.PostLoad(self, args)
 	
 	--self:NKActivateEmitterByName("")
 	self.m_charging = true
 end
 
 -------------------------------------------------------------------------------
-EntityFramework:RegisterGameObject(ElectricGauntlet)
+EntityFramework:RegisterGameObject(ElectroGauntlet)

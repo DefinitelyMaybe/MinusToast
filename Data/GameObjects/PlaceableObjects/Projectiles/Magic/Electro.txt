@@ -5,7 +5,7 @@ GameObjects
 	PlaceableObject
 	{
 
-		ElectricBall Projectile
+		Electro Ball
 		{
 			Transform
 			{
@@ -13,8 +13,9 @@ GameObjects
 			
 			Script
 			{
-				file = "Scripts/Objects/TestProjectile.lua"
-				class = "TestProjectile"
+				file = "Scripts/Objects/Effects/ElectroProjectile.lua"
+				class = "ElectroProjectile"
+
 				arguments
 				{
 				
@@ -22,14 +23,13 @@ GameObjects
 					BreakSound = "ItemBreak"
 					
 					#DontInitilize = 1
-					
 					#DeleteOnRestore = 1
 				}
 			}
 
 			Equipable
 			{
-				name = "Test Projectile"
+				name = "Electric Ball"
 				//icon = "crystalClusterRuby"
 				minScale = 1.0
 				maxScale = 1.0

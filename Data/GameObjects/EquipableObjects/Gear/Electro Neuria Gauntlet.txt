@@ -1,8 +1,7 @@
-
 {
 	PlaceableObject
 	{
-		Test Gauntlet
+		Electro Neuria Gauntlet
 		{
 			Tag = "Gear"
 			
@@ -11,8 +10,8 @@
 			}
 			Script
 			{
-				file = "Scripts/Objects/TestGauntlet.lua"
-				class = "TestGauntlet"
+				file = "Scripts/Objects/Gauntlet.lua"
+				class = "Gauntlet"
 				
 				arguments
 				{
@@ -24,9 +23,21 @@
 					
 					#emptyContainer = "Bronze Plated Glove"
 					energyUsed = 0
-					spellName = "Teleball"
-					spellIcon = "TUGIcons/telespell_icon"
+
+					energyUsed = 15
 					
+					#These are from Ice Neuria Gaunlet and I thought they might be helpful
+					#persistent = 1
+					#amount of time between ticks
+					#castingTimerTick = 1.0
+					#energy used per tick
+					#energyPerTick = 15
+					#durability damage per tick
+					#durabilityPerTick = 0.4
+
+					spellName = "Electro"
+					#icon needed
+					spellIcon = "TUGIcons/firespell_icon"
 					castingSound = "FireballCast"
 					endCastingSound = "FireballEndCast"
 					noEnergySound = "StaminaOut"
@@ -40,7 +51,7 @@
 					
 					Projectile
 					{
-						name = "Teleball Projectile"
+						name = "Electro Projectile"
 					}
 
 					swinganimations
@@ -68,7 +79,7 @@
 				model = "Models/PlaceableObjects/Refined/fireball_neuria_Gauntlet.obj"
 				Diffuse
 				{
-					0 = "Models/PlaceableObjects/Refined/fireball_neuria_Gauntlet.tga"
+					0 = "Models/PlaceableObjects/Refined/Electro_neuria_Gauntlet.tga"
 					1 = "Models/PlaceableObjects/Refined/bronze_glove_Plate_diff.tga"
 					2 = "Models/PlaceableObjects/Refined/gauntlet_active_Stone_new_diff.tga"
 				}
@@ -108,8 +119,11 @@
 
 			Placeable
 			{
-				name = "Teleball Neuria Gauntlet"
+				name = "Electro Neuria Gauntlet"
+
+				#icon needed.
 				icon = "fireball_neuria_Gauntlet_icon"
+
 				minScale = 1.0
 				maxScale = 1.0
 				

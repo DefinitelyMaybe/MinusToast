@@ -1,0 +1,275 @@
+#PlaceHolder / Can be deleted
+{
+	FX
+	{
+		Wisp Blue Body Emitter
+		{
+			Emitter
+			{
+				endless
+				type = "Swarm"
+
+				emitsLight = 1
+				lightRadius = 10.0
+				lightOffset = <0.0, 0.0, 0.0>
+				lightColor = <0.1, 0.22, 0.57>
+
+				wispBlueTrail_01
+				{
+					rate = 15
+					rateVariance = 5
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.75f, 0.75f, 0.75f>
+					rotation = 0
+					rotationVariance = 360
+					type = "spherical"
+					radius = 0.35
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlueTrail_02
+				{
+					rate = 15
+					rateVariance = 5
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.75f, 0.75f, 0.75f>
+					rotation = 0
+					rotationVariance = -360
+					type = "spherical"
+					radius = 0.35
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlueTrail_03
+				{
+					rate = 15
+					rateVariance = 5
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.75f, 0.75f, 0.75f>
+					rotation = 0
+					rotationVariance = -360
+					type = "spherical"
+					radius = 0.35
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlue_01
+				{
+					rate = 15
+					rateVariance = 5
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.25f, 0.25f, 0.25f>
+					rotation = 0
+					rotationVariance = -360
+					type = "point"
+					randomizeAtSpawn
+				}
+
+				wispBlue_02
+				{
+					rate = 15
+					rateVariance = 5
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.25f, 0.25f, 0.25f>
+					rotation = 0
+					rotationVariance = -360
+					type = "point"
+					randomizeAtSpawn
+				}
+
+				wispBlueCore
+				{
+					rate = 6
+					rateVariance = 1
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.25f, 0.25f, 0.25f>
+					rotation = 0
+					rotationVariance = -360
+					type = "point"
+					randomizeAtSpawn
+				}
+			}
+			Transform
+			{
+			}
+		}
+
+		Wisp Blue Tail Emitter
+		{
+			Emitter
+			{
+				endless
+				type = "Swarm"
+
+				wispBlueTrail_01
+				{
+					rate = 75
+					rateVariance = 25
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.15f, 0.15f, 0.15f>
+					rotation = 0
+					rotationVariance = 360
+					type = "spherical"
+					radius = 0.0
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlueTrail_02
+				{
+					rate = 75
+					rateVariance = 25
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.15f, 0.15f, 0.15f>
+					rotation = 0
+					rotationVariance = -360
+					type = "spherical"
+					radius = 0.0
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlueTrail_03
+				{
+					rate = 75
+					rateVariance = 25
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.15f, 0.15f, 0.15f>
+					rotation = 0
+					rotationVariance = -360
+					type = "spherical"
+					radius = 0.0
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlueCoreTrail_01
+				{
+					rate = 75
+					rateVariance = 25
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.0f, 0.75f, 0.0f>
+					rotation = 0
+					rotationVariance = 360
+					type = "spherical"
+					radius = 0.0
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlueCoreTrail_02
+				{
+					rate = 75
+					rateVariance = 25
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.0f, 0.75f, 0.0f>
+					rotation = 0
+					rotationVariance = -360
+					type = "spherical"
+					radius = 0.0
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlueCoreTrail_03
+				{
+					rate = 75
+					rateVariance = 25
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.0f, 0.75f, 0.0f>
+					rotation = 0
+					rotationVariance = -360
+					type = "spherical"
+					radius = 0.0
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+
+				wispBlueMotes
+				{
+					rate = 10
+					rateVariance = 2
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <3.5f, 3.5f, 3.5f>
+					rotation = 0
+					rotationVariance = 360
+					type = "spherical"
+					radius = 0.5
+					emitFrom = "volume"
+					randomizeAtSpawn
+				}
+			}
+			Transform
+			{
+			}
+		}
+
+		Wisp Blue Ribbon Emitter
+		{
+			Emitter
+			{
+				endless
+				type = "Swarm"
+
+				wispBlueRibbon
+				{
+					rate = 13
+					rateVariance = 2
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.25f, 0.0f, 0.25f>
+					rotation = 0
+					rotationVariance = 0
+					type = "ribbon"
+				}
+			}
+			Transform
+			{
+			}
+		}
+	}
+}

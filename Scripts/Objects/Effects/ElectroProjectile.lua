@@ -2,10 +2,10 @@ include("Scripts/Mixins/EventExecutorMixin.lua")
 include("Scripts/Mixins/HandlerContainerMixin.lua")
 include("Scripts/Handlers/HandlerTrajectory.lua")
 -------------------------------------------------------------------------------
-TestProjectile = PlaceableObject.Subclass("TestProjectile")
+ElectroProjectile = PlaceableObject.Subclass("ElectroProjectile")
 
 -------------------------------------------------------------------------------
-function TestProjectile:Constructor( args )
+function ElectroProjectile:Constructor( args )
 	self:Mixin(HandlerContainerMixin, args)
 	
 	self.m_source = nil
@@ -17,7 +17,7 @@ function TestProjectile:Constructor( args )
 end
 
 -------------------------------------------------------------------------------
-function TestProjectile:Fire(payload, direction, force)
+function ElectroProjectile:Fire(payload, direction, force)
 	if payload ~= nil then
 		self:SetSource(payload.source)
 	end
@@ -32,21 +32,21 @@ function TestProjectile:Fire(payload, direction, force)
 end
 
 -------------------------------------------------------------------------------
-function TestProjectile:Stop()
+function ElectroProjectile:Stop()
 	self.m_fired = false
 	if self.m_handler and self.m_handler.Stop then
 		self.m_handler:Stop()
 	end
 end
 
-function TestProjectile:NetSerializeConstruction( stream )
+function ElectroProjectile:NetSerializeConstruction( stream )
 end
 
-function TestProjectile:NetDeserializeConstruction( stream )
+function ElectroProjectile:NetDeserializeConstruction( stream )
 end
 
 -------------------------------------------------------------------------------
-function TestProjectile:NetSerialize( stream )
+function ElectroProjectile:NetSerialize( stream )
 	stream:NKWriteBool(self.m_fired)
 	if self.m_fired then
 		if self.m_source and self.m_source.object then
@@ -59,7 +59,7 @@ function TestProjectile:NetSerialize( stream )
 end
 
 -------------------------------------------------------------------------------
-function TestProjectile:NetDeserialize( stream )
+function ElectroProjectile:NetDeserialize( stream )
 	self.m_fired = stream:NKReadBool()
 	if self.m_fired then
 		if stream:NKReadBool() then
@@ -75,7 +75,7 @@ function TestProjectile:NetDeserialize( stream )
 end
 
 --------------------------------------------------------------------------------
-function TestProjectile:SetSource( source )
+function ElectroProjectile:SetSource( source )
 	-- same source, no change required
 	if source == self.m_source then
 		--No source to set
@@ -111,4 +111,4 @@ end
 
 
 -------------------------------------------------------------------------------
-EntityFramework:RegisterGameObject(TestProjectile)
+EntityFramework:RegisterGameObject(ElectroProjectile)

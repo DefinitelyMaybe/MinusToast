@@ -12,6 +12,7 @@ Aditional: Make a bunch of early game clay objects.
 ----------------------------------------------------------------------
 5 - Attractor to pull/push characters (Think of the Thaumic Thinkerer attractor block)
 ----------------------------------------------------------------------
+(Currently working on it)
 6 - Electric projectile, when in stance it pulls electricity from the air and the more it got, the stronger the projectiel will be. The projectile will paralyse the hit objects. (Or around the object it’ll make a event area thing)
 ----------------------------------------------------------------------
 7 - Moving storage (follows you)
@@ -24,4 +25,7 @@ Aditional: Make a bunch of early game clay objects.
 ----------------------------------------------------------------------
 11 - Camera Position when crouched in relation to shadows cast and head position.
 ----------------------------------------------------------------------
-12 -
+(Will be the next project if we have time)
+12 - GlowCorn Slingshot
+----------------------------------------------------------------------
+13 - 

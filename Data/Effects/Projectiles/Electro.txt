@@ -1,4 +1,4 @@
-ElecProj
+Electro
 {
 
 	Handlers
@@ -17,6 +17,12 @@ ElecProj
 	
 	Events
 	{
+		OnContact
+		{
+			Impulse
+			{
+				jsonFile = "Data/Effects/Projectiles/Electro/OnContact.json"
+			}
+		}
 	}
-	
 }
