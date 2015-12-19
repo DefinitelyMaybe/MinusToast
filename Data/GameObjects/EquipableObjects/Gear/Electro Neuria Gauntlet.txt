@@ -66,7 +66,7 @@
 						}
 						"Left Hand"
 						{
-							submesh = "Geo_L_Hand_FireGauntlet01"
+							submesh = "Geo_L_Hand_ElectroGauntlet01"
 							priority = 1.0
 						}
 					}
@@ -79,7 +79,7 @@
 				{
 					0 = "Models/PlaceableObjects/Refined/Electro_neuria_Gauntlet.tga"
 					1 = "Models/PlaceableObjects/Refined/bronze_glove_Plate_diff.tga"
-					2 = "Models/PlaceableObjects/Refined/gauntlet_active_Stone_new_diff.tga"
+					2 = "Models/PlaceableObjects/Refined/Electro Neuria gauntlet.tga"
 				}
 				Glow
 				{

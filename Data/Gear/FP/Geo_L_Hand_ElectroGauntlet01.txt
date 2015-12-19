@@ -1,0 +1,24 @@
+
+{
+	Submeshes
+	{
+		Geo_L_Hand_FireGauntlet01
+		{
+			mesh = "Geo_L_Hand_FireGauntlet01"
+			Textures
+			{
+				Diffuse
+				{
+					0 = "Character/Seed/3P/0Child/Male/Textures/fireball_neuria_Gauntlet.tga"
+					1 = "Character/Seed/3P/0Child/Male/Textures/Seedling_Body_diff.tga"
+					2 = "Character/Seed/3P/0Child/Male/Textures/bronze_glove_Plate_diff.tga"
+					3 = "Character/Seed/3P/0Child/Male/Textures/gauntlet_active_Stone_new_diff.tga"
+				}
+				Glow
+				{
+					3 = "Character/Seed/3P/0Child/Male/Textures/lifestone_glow.tga"
+				}
+			}
+		}
+	}
+}
