@@ -66,7 +66,7 @@
 						}
 						"Left Hand"
 						{
-							submesh = "Geo_L_Hand_ElectroGauntlet01"
+							submesh = "Geo_L_Hand_IceGauntlet01"
 							priority = 1.0
 						}
 					}
