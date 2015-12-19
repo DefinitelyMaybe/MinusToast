@@ -37,7 +37,7 @@
 			"time": 0.25
 		},
 		{
-			"effectScript": "RemoveProjectile",
+			"effectScript": "Remove",
 		}
 	]
 }

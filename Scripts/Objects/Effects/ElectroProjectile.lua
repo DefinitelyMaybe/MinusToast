@@ -1,6 +1,6 @@
 include("Scripts/Mixins/EventExecutorMixin.lua")
 include("Scripts/Mixins/HandlerContainerMixin.lua")
-include("Scripts/Handlers/HandlerTrajectory.lua")
+include("Scripts/Handlers/HandlerChargedTrajectory.lua")
 -------------------------------------------------------------------------------
 ElectroProjectile = PlaceableObject.Subclass("ElectroProjectile")
 
