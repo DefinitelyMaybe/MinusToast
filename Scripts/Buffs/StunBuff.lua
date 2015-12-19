@@ -7,7 +7,16 @@ if StunBuff == nil then
 end
 
 StunBuff.Name = "StunBuff"
-StunBuff.Emitter = "Magic Electrified Seed Emitter"
+--StunBuff.Emitter = "Magic Electrified Seed Emitter"
+StunBuff.Emitter = "LightningBolt01 Emitter"
+StunBuff.EmitterNames = {
+	"LightningBolt01 Emitter",
+	"LightningBolt02 Emitter",
+	"LightningBolt03 Emitter",
+	"LightningBolt04 Emitter",
+	"LightningBolt05 Emitter",
+	"LightningBolt06 Emitter"
+}
 
 StunBuff.StatToModify = "SpeedMultiplier"
 StunBuff.DefaultModification = 1.0
@@ -19,12 +28,18 @@ function StunBuff:OnStart()
 	
 	NKWarn("StunBuff Applied")
 	
-	self.m_emitter = Eternus.GameObjectSystem:NKCreateGameObject(self.Emitter, true)
-	self.m_emitter:NKSetShouldSave(false)
-	self.m_emitter:NKSetPosition(self.m_object:NKGetWorldPosition())
-	self.m_object:NKAddChildObject(self.m_emitter)
-	self.m_emitter:NKPlaceInWorld(true, false)
-	self.m_object:NKActivateEmitterByName(self.Emitter)
+	self.m_emitter = {}
+	
+	if self.EmitterNames then
+		for i = 1, 6 do
+			self.m_emitter[i] = Eternus.GameObjectSystem:NKCreateGameObject(self.EmitterNames[i], true)
+			self.m_emitter[i]:NKSetShouldSave(false)
+			self.m_emitter[i]:NKSetPosition(self.m_object:NKGetWorldPosition() + vec3.new(0,1.75,0))
+			self.m_object:NKAddChildObject(self.m_emitter[i])
+			self.m_emitter[i]:NKPlaceInWorld(true, false)
+			self.m_object:NKActivateEmitterByName(self.EmitterNames[i])
+		end
+	end
 	
 	--Would like to stop running animations
 	--Stop any movement
@@ -36,10 +51,15 @@ end
 -------------------------------------------------------------------------------
 function StunBuff:OnStop()
 	StunBuff.__super.OnStop(self)
-	if self.Emitter then
-		self.m_object:NKDeactivateEmitterByName(self.Emitter)
-		self.m_object:NKRemoveChildObject(self.m_emitter)
-		self.m_emitter:NKDeleteMe()
+	
+	--self.emitters = {}
+	
+	if self.EmitterNames then
+		for i = 1, 6 do
+			self.m_object:NKDeactivateEmitterByName(self.EmitterNames[i])
+			self.m_object:NKRemoveChildObject(self.m_emitter[i])
+			self.m_emitter[i]:NKDeleteMe()
+		end
 	end
 	
 	if self.m_destroyedSignal and self.__removeCallback then

@@ -55,7 +55,7 @@ function ElectroGauntlet:GearPrimaryAction(args)
 			offset = projectileData.m_offset,
 			source = player,
 		}
-		self.effect:Fire(throwablePayload, args.direction, 15)
+		effect:Fire(throwablePayload, args.direction, 15)
 		
 		-- type is persistent, set currentProjectile
 		if self.m_persistent then

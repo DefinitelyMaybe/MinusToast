@@ -93,6 +93,30 @@ GameObjects
 				{
 					offset = <0.0, 0.0, 0.0>
 				}
+				LightningBolt01 Emitter
+				{
+					offset = <0.0, 0.0, 0.0>
+				}
+				LightningBolt02 Emitter
+				{
+					offset = <0.0, 0.0, 0.0>
+				}
+				LightningBolt03 Emitter
+				{
+					offset = <0.0, 0.0, 0.0>
+				}
+				LightningBolt04 Emitter
+				{
+					offset = <0.0, 0.0, 0.0>
+				}
+				LightningBolt05 Emitter
+				{
+					offset = <0.0, 0.0, 0.0>
+				}
+				LightningBolt06 Emitter
+				{
+					offset = <0.0, 0.0, 0.0>
+				}
 			}
 		}
 	}
