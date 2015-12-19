@@ -1,3 +1,4 @@
+
 {
 	PlaceableObject
 	{
@@ -21,11 +22,10 @@
 					encumbrance = 0.9
 					equipSound = "MetalDig"
 					
-					#emptyContainer = "Bronze Plated Glove"
-					energyUsed = 0
-
+					emptyContainer = "Bronze Plated Glove"
 					energyUsed = 15
-					
+					spellName = "Electro"
+					spellIcon = "TUGIcons/firespell_icon"
 					#These are from Ice Neuria Gaunlet and I thought they might be helpful
 					#persistent = 1
 					#amount of time between ticks
@@ -35,9 +35,6 @@
 					#durability damage per tick
 					#durabilityPerTick = 0.4
 
-					spellName = "Electro"
-					#icon needed
-					spellIcon = "TUGIcons/firespell_icon"
 					castingSound = "FireballCast"
 					endCastingSound = "FireballEndCast"
 					noEnergySound = "StaminaOut"
@@ -120,18 +117,15 @@
 			Placeable
 			{
 				name = "Electro Neuria Gauntlet"
-
-				#icon needed.
 				icon = "fireball_neuria_Gauntlet_icon"
-
 				minScale = 1.0
 				maxScale = 1.0
 				
 				category = "Metal"
 				tier = 3
-				#health = 6
-				#durabilityLossOnCorrect = 2.0
-				#durabilityLossOnIncorrect = 8.0
+				health = 6
+				durabilityLossOnCorrect = 2.0
+				durabilityLossOnIncorrect = 8.0
 				resource = 1
 				maxStackCount = 1.0
 				

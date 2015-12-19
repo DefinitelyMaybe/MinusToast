@@ -1,13 +1,13 @@
-include("Scripts/Interactable.lua")
+--include("Scripts/Interactable.lua")
 
 ElectroGauntlet = EternusEngine.Mixin.Subclass("ElectroGauntlet")
 
 --[[ElectroGauntlet.Models = {}
 ElectroGauntlet.Models[1] = NKLoadStaticModel("Data/eyes.txt")--]]
 
-ElectroGauntlet.Effect = {
-	"Projectiles/ElectroProjectile.txt"
-}
+--ElectroGauntlet.Effect = {
+--	"Projectiles/ElectroProjectile.txt"
+--}
 
 
 function ElectroGauntlet:PostLoad(dt) 
@@ -23,12 +23,12 @@ function ElectroGauntlet:Constructor(args)
 end
 
 -------------------------------------------------------------------------------
-function TestGauntlet:Interact(args)
-	self.m_id = next(TestGauntlet.Effect, self.m_id) or 1
-	
-	local str = "Using Effect Test: " .. TestGauntlet.Effect[self.m_id]
-	args.player:SendChatMessage(str)
-end
+--function ElectroGauntlet:Interact(args)
+--	self.m_id = next(ElectroGauntlet.Effect, self.m_id) or 1
+--	
+--	local str = "Using Effect Test: " .. ElectroGauntlet.Effect[self.m_id]
+--	args.player:SendChatMessage(str)
+--end
 
 -------------------------------------------------------------------------------
 function ElectroGauntlet:GearPrimaryAction(args)

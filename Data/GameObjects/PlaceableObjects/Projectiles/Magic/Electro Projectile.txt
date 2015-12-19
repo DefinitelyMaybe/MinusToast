@@ -5,7 +5,7 @@ GameObjects
 	PlaceableObject
 	{
 
-		Electro Ball
+		Electro Projectile
 		{
 			Transform
 			{
@@ -21,27 +21,29 @@ GameObjects
 				
 					CreakingSound = "ItemCreak"
 					BreakSound = "ItemBreak"
-					
 					#DontInitilize = 1
 					#DeleteOnRestore = 1
 				}
 			}
 
-			Equipable
+			Placeable
 			{
-				name = "Electric Ball"
+				name = "Electro Projectile"
 				//icon = "crystalClusterRuby"
 				minScale = 1.0
 				maxScale = 1.0
-				miningEmitter = "Slingshot Stone Break Emitter"
 				category = "Weapon"
+				resource = 1
 				tier = 3
+
 				damageToCharacters = 19
 				damageToObjects = 7
-				impactFailSound = "MetalDig"
 				weaponRange = 7.0
 				maxStackCount = 100
-				--resource = 1
+
+				impactFailSound = "MetalDig"
+				miningEmitter = "Slingshot Stone Break Emitter"
+
 				handleType = "one"
 			}
 			
@@ -80,7 +82,7 @@ GameObjects
 			
 			Light
 			{
-				lightRadius = 0.01
+				lightRadius = 1.0
 				lightOffset = <0.0, 0.0, 0.0>
 				lightColor = <0.0, 0.0, 0.0>
 			}
@@ -88,15 +90,6 @@ GameObjects
 			Children
 			{
 				Magic FireBall Emitter
-				{
-					offset = <0.0, 0.0, 0.0>
-				}
-				FireBall Attractor
-				{
-					offset = <0.0, 0.0, 0.0>
-					emitter = "Magic FireBall Emitter"
-				}
-				Magic FireBall Trail Emitter
 				{
 					offset = <0.0, 0.0, 0.0>
 				}

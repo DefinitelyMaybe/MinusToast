@@ -1,6 +1,6 @@
 ﻿{
 	"type": "EffectGroup",
-	"name": "Fireball:OnContact",
+	"name": "Electro:OnContact",
 	
 	"effects": [
 		{
