@@ -4,7 +4,30 @@ Particles
 
 	Magic Electro Ball01
 	{
-		textureName = "FX/Textures/ElectroBall.png"
+		textureName = "FX/Textures/ElectroBall01.png"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <0.75, 0.75, 0.97>
+		rotationSpeed = 95.0
+		scaling = <1.0,1.0,1.0>
+		scalingSpeed = <1.5, 1.5, 1.5>
+		scalingType = "multiply"
+		scalingVariance = 1.5
+		acceleration = <0.0, 2, 0.0>
+		maxAge = 1
+		ageVariance = 0.2
+		ageToStartFading = 0.9
+		ageToStartShrinking = 0
+		blendType = "additive"
+		fadeInAge = 0.1
+		growInAge = 0.3
+		speedCap = 100
+	}
+
+	Magic Electro Ball02
+	{
+		textureName = "FX/Textures/ElectroBall02.png"
 		textureSize = 256
 		elasticity = 0.0
 		addColor = <0.0, 0.0, 0.0>

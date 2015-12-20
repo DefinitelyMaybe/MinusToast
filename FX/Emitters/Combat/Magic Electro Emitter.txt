@@ -1,7 +1,7 @@
 {
 	FX
 	{
-		Magic Electro Ball Emitter
+		Magic Electro Ball Blue Emitter
 		{
 			Emitter
 			{
@@ -27,156 +27,43 @@
 			{
 			}
 		}
-		LightningBolt01 Emitter
+		Magic Electro Ball Green Emitter
 		{
 			Emitter
 			{
-				lifespan = 999999
 				endless
 				type = "Swarm"
 
-				LightningBolts
+				Magic Electro Ball02
 				{
-					rate = 1.0
-					rateVariance = 0.5
-					oscillation = 2.0
+					rate = 19
+					oscillation = 1
 					start = 0
 					stop = 1
 					velocity = <0.0f, 0.0f, 0.0f>
-					velocityVariance = <1.35f, 1.35f, 1.35f>
-					rotation = 0
-					rotationVariance = 0
+					velocityVariance = <0.0f, 0.0f, 0.0f>
+					rotation = 180
+					rotationVariance = 360
 					type = "point"
-					randomizeAtSpawn
+					respectRotation
 				}
-			}
-			Transform
-			{
-			}
-		}
-		LightningBolt02 Emitter
-		{
-			Emitter
-			{
-				lifespan = 999999
-				endless
-				type = "Swarm"
-
-				LightningBolts
-				{
-					rate = 2.0
-					rateVariance = 1.0
-					oscillation = 2.0
-					start = 0
-					stop = 1
-					velocity = <0.0f, 0.0f, 0.0f>
-					velocityVariance = <1.4f, 1.4f, 1.4f>
-					rotation = 0
-					rotationVariance = 0
-					type = "point"
-					randomizeAtSpawn
-				}
+				
 			}
 			Transform
 			{
 			}
 		}
 
-		LightningBolt03 Emitter
+		Lightning Bolts Green Emitter
 		{
 			Emitter
 			{
-				lifespan = 999999
 				endless
 				type = "Swarm"
 
 				LightningBolts
 				{
-					rate = 4.0
-					rateVariance = 1.5
-					oscillation = 2.0
-					start = 0
-					stop = 1
-					velocity = <0.0f, 0.0f, 0.0f>
-					velocityVariance = <1.5f, 1.5f, 1.5f>
-					rotation = 0
-					rotationVariance = 0
-					type = "point"
-					randomizeAtSpawn
-				}
-			}
-			Transform
-			{
-			}
-		}
-
-		LightningBolt04 Emitter
-		{
-			Emitter
-			{
-				lifespan = 999999
-				endless
-				type = "Swarm"
-
-				LightningBolts
-				{
-					rate = 8.0
-					rateVariance = 4.0
-					oscillation = 2.0
-					start = 0
-					stop = 1
-					velocity = <0.0f, 0.0f, 0.0f>
-					velocityVariance = <1.75f, 1.75f, 1.75f>
-					rotation = 0
-					rotationVariance = 0
-					type = "point"
-					randomizeAtSpawn
-				}
-			}
-			Transform
-			{
-			}
-		}
-
-		LightningBolt05 Emitter
-		{
-			Emitter
-			{
-				lifespan = 999999
-				endless
-				type = "Swarm"
-
-				LightningBolts
-				{
-					rate = 16.0
-					rateVariance = 8.0
-					oscillation = 2.0
-					start = 0
-					stop = 1
-					velocity = <0.0f, 0.0f, 0.0f>
-					velocityVariance = <2.0f, 2.0f, 2.0f>
-					rotation = 0
-					rotationVariance = 0
-					type = "point"
-					randomizeAtSpawn
-				}
-			}
-			Transform
-			{
-			}
-		}
-
-		LightningBolt06 Emitter
-		{
-			Emitter
-			{
-				lifespan = 999999
-				endless
-				type = "Swarm"
-
-				LightningBolts
-				{
-					rate = 32.0
+					rate = 50.0
 					rateVariance = 12.0
 					oscillation = 2.0
 					start = 0

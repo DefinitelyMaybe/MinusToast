@@ -13,8 +13,8 @@ GameObjects
 			
 			Script
 			{
-				file = "Scripts/Objects/Effects/ElectroProjectile.lua"
-				class = "ElectroProjectile"
+				file = "Scripts/Objects/Effects/NewProjectile.lua"
+				class = "NewProjectile"
 
 				arguments
 				{
@@ -47,20 +47,20 @@ GameObjects
 				handleType = "one"
 			}
 			
-			StaticGraphics
-			{
-				model = "Character/Weapons/fireball.obj"
-				dontCastShadows = 1.0
-				
-				Diffuse
-				{
-					"stone" = "Character/Weapons/slingshot_diff.tga"
-				}
-				Normal
-				{
-					"stone" = "Character/Weapons/slingshot_norm.tga"
-				}
-			}
+			#StaticGraphics
+			#{
+			#	model = "Character/Weapons/fireball.obj"
+			#	dontCastShadows = 1.0
+			#	
+			#	Diffuse
+			#	{
+			#		"stone" = "Character/Weapons/slingshot_diff.tga"
+			#	}
+			#	Normal
+			#	{
+			#		"stone" = "Character/Weapons/slingshot_norm.tga"
+			#	}
+			#}
 			
 			Physics
 			{
@@ -68,13 +68,13 @@ GameObjects
 				{
 					Sphere
 					{
-						radius = 0.5
+						radius = 0.1
 					}
 
 					Sphere
 					{
 						trigger = 1
-						radius = 2.0
+						radius = 5
 						material = "TRIGGER_BROAD"
 					}
 				}
@@ -89,31 +89,11 @@ GameObjects
 			
 			Children
 			{
-				Magic Electro Ball Emitter
+				Magic Electro Ball Green Emitter
 				{
 					offset = <0.0, 0.0, 0.0>
 				}
-				LightningBolt01 Emitter
-				{
-					offset = <0.0, 0.0, 0.0>
-				}
-				LightningBolt02 Emitter
-				{
-					offset = <0.0, 0.0, 0.0>
-				}
-				LightningBolt03 Emitter
-				{
-					offset = <0.0, 0.0, 0.0>
-				}
-				LightningBolt04 Emitter
-				{
-					offset = <0.0, 0.0, 0.0>
-				}
-				LightningBolt05 Emitter
-				{
-					offset = <0.0, 0.0, 0.0>
-				}
-				LightningBolt06 Emitter
+				Lightning Bolts Green Emitter
 				{
 					offset = <0.0, 0.0, 0.0>
 				}
