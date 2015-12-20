@@ -45,6 +45,10 @@ GameObjects
 					{
 						OnSpawn
 						{
+							#Charge
+							#{
+							#	jsonFile = "Data/Effects/Projectiles/Electro/Stone_OnStart.json"
+							#}
 						}
 						OnContact
 						{
