@@ -1,6 +1,132 @@
 {
 	FX
 	{
+		Magic Electro Trail Emitter
+		{
+			Emitter
+			{
+				endless
+				type = "Strike"
+
+				Magic Electro Trail01
+				{
+					rate = 11
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 1.4f, 0.0f>
+					velocityVariance = <0.3f, 0.3f, 0.3f>
+					rotation = 180
+					rotationVariance = 360
+					type = "Spherical"
+					radius = .3
+					randomizeAtSpawn
+				}
+				Magic Electro Trail02
+				{
+					rate = 11
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 1.4f, 0.0f>
+					velocityVariance = <0.3f, 0.3f, 0.3f>
+					rotation = 180
+					rotationVariance = 360
+					type = "Spherical"
+					radius = .3
+					randomizeAtSpawn
+				}
+				Magic Electro Trail03
+				{
+					rate = 11
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 1.4f, 0.0f>
+					velocityVariance = <0.3f, 0.3f, 0.3f>
+					rotation = 180
+					rotationVariance = 360
+					type = "Spherical"
+					radius = .3
+					randomizeAtSpawn
+				}
+				#Magic Electro Trail04
+				#{
+				#	rate = 7
+				#	oscillation = 1
+				#	start = 0
+				#	stop = 1
+				#	velocity = <0.0f, 0.0f, 0.0f>
+				#	velocityVariance = <3.3f, 3.4f, 3.3f>
+				#	rotation = 0
+				#	rotationVariance = 120
+				#	type = "spherical"
+				#	radius = 0.3
+				#	upVector = <0.0f, 1.0f, 0.0f>
+				#	randomizeAtSpawn
+				#}
+				Magic Electro Trail05
+				{
+					rate = 12
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.3f, 0.3f, 0.3f>
+					rotation = 0
+					rotationVariance = 120
+					type = "spherical"
+					radius = 0.3
+					upVector = <0.0f, 1.0f, 0.0f>
+					randomizeAtSpawn
+				}
+			}
+			Transform
+			{
+			}
+		}
+		
+		Magic Electro Emitter
+		{
+			Emitter
+			{
+				endless
+				type = "Strike"
+
+				Magic Electro01
+				{
+					rate = 5
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.3f, 0.3f, 0.3f>
+					rotation = 180
+					rotationVariance = 360
+					type = "Spherical"
+					radius = .3
+					randomizeAtSpawn
+				}
+				Magic Electro02
+				{
+					rate = 5
+					oscillation = 1
+					start = 0
+					stop = 1
+					velocity = <0.0f, 0.0f, 0.0f>
+					velocityVariance = <0.3f, 0.3f, 0.3f>
+					rotation = 180
+					rotationVariance = 360
+					type = "Spherical"
+					radius = .3
+					randomizeAtSpawn
+				}
+			}
+			Transform
+			{
+			}
+		}
+		
 		Magic Electro Ball Blue Emitter
 		{
 			Emitter

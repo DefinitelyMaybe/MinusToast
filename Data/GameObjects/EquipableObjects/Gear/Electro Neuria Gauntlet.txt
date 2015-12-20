@@ -11,8 +11,8 @@
 			}
 			Script
 			{
-				file = "Scripts/Objects/NewGauntlet.lua"
-				class = "NewGauntlet"
+				file = "Scripts/Objects/ElectroGauntlet.lua"
+				class = "ElectroGauntlet"
 				
 				arguments
 				{
@@ -23,18 +23,18 @@
 					equipSound = "MetalDig"
 					
 					emptyContainer = "Bronze Plated Glove"
-					energyUsed = 15
+					energyUsed = 0 #15
 					spellName = "Electro"
 					spellIcon = "TUGIcons/firespell_icon"
 					
 					#These are from Ice Neuria Gaunlet and I thought they might be helpful
-					persistent = 1
+					#persistent = 1
 					#amount of time between ticks
-					castingTimerTick = 1.0
+					#castingTimerTick = 1.0
 					#energy used per tick
-					energyPerTick = 15
+					#energyPerTick = 15
 					#durability damage per tick
-					durabilityPerTick = 0.4
+					#durabilityPerTick = 0.4
 
 					castingSound = "FireballCast"
 					endCastingSound = "FireballEndCast"

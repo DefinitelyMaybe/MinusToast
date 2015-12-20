@@ -1,10 +1,170 @@
 ﻿
 Particles
 {
+	Magic Electro Trail01
+	{
+		textureName = "FX/Textures/ElectroTrail01.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 45.0
+		scaling = <3.8,3.8,3.8>
+		scalingSpeed = <0.5, 0.5, 0.5>
+		scalingType = "multiply"
+		scalingVariance = 1.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.3
+		ageVariance = 0.1
+		ageToStartFading = 0.25
+		ageToStartShrinking = 0.01
+		fadeInAge = 0.1
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 1.8
+		orientation = "normal"
+	}
+	Magic Electro Trail02
+	{
+		textureName = "FX/Textures/ElectroTrail02.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 45.0
+		scaling = <3.8,3.8,3.8>
+		scalingSpeed = <0.5, 0.5, 0.5>
+		scalingType = "multiply"
+		scalingVariance = 1.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.3
+		ageVariance = 0.1
+		ageToStartFading = 0.25
+		ageToStartShrinking = 0.01
+		fadeInAge = 0.1
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 1.8
+		orientation = "normal"
+	}
+	Magic Electro Trail03
+	{
+		textureName = "FX/Textures/ElectroTrail03.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 45.0
+		scaling = <3.8,3.8,3.8>
+		scalingSpeed = <0.5, 0.5, 0.5>
+		scalingType = "multiply"
+		scalingVariance = 1.0
+		acceleration = <0.0, 0, 0.0>
+		maxAge = 0.3
+		ageVariance = 0.1
+		ageToStartFading = 0.25
+		ageToStartShrinking = 0.01
+		fadeInAge = 0.1
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 1.8
+		orientation = "normal"
+	}
 
+	Magic Electro Trail04
+	{
+		textureName = "FX/Textures/ElectroTrail04.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 0.25
+		scaling = <.3, .3, .3>
+		scalingSpeed = <0.7, 0.7, 0.7>
+		scalingType = "multiply"
+		scalingVariance = 0
+		acceleration = <0, 0, 0>
+		maxAge = 0.5
+		ageVariance = .2
+		ageToStartFading = 0.3
+		ageToStartShrinking = 0.35
+		fadeInAge = 0.1
+		growInAge = 0
+		blendType = "additive"
+		speedCap = 100
+		orientation = "normal"
+	}
+	Magic Electro Trail05
+	{
+		textureName = "FX/Textures/ElectroTrail05.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <1.0, 0.5, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 195.0
+		scaling = <0.75, 0.75, 0.75>
+		scalingSpeed = <2.9, 2.9, 2.9>
+		scalingType = "multiply"
+		scalingVariance = 0.5
+		acceleration = <0.0, 0.0, 0.0>
+		maxAge = 0.45
+		ageVariance = 0.3
+		ageToStartFading = 0.1
+		ageToStartShrinking = 0.0
+		blendType = "additive"
+		fadeInAge = 6.3
+		growInAge = 0
+		speedCap = 100
+	}
+	
+	Magic Electro01
+	{
+		textureName = "FX/Textures/Electro01.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 195.0
+		scaling = <0.9,0.9,0.9>
+		scalingSpeed = <0.7, 0.7, 0.7>
+		scalingType = "multiply"
+		scalingVariance = 0.5
+		acceleration = <0.0, 2, 0.0>
+		maxAge = 0.45
+		ageVariance = 0.15
+		ageToStartFading = 0.39
+		ageToStartShrinking = 0.27
+		blendType = "additive"
+		fadeInAge = 0.1
+		growInAge = 0
+		speedCap = 100
+	}
+	Magic Electro02
+	{
+		textureName = "FX/Textures/Electro03.tga"
+		textureSize = 256
+		elasticity = 0.0
+		addColor = <0.0, 0.0, 0.0>
+		multiplyColor = <1.0, 1.0, 1.0>
+		rotationSpeed = 195.0
+		scaling = <0.9,0.9,0.9>
+		scalingSpeed = <0.7, 0.7, 0.7>
+		scalingType = "multiply"
+		scalingVariance = 0.5
+		acceleration = <0.0, 2, 0.0>
+		maxAge = 0.45
+		ageVariance = 0.15
+		ageToStartFading = 0.39
+		ageToStartShrinking = 0.27
+		blendType = "additive"
+		fadeInAge = 0.1
+		growInAge = 0
+		speedCap = 100
+	}
+	
 	Magic Electro Ball01
 	{
-		textureName = "FX/Textures/ElectroBall01.png"
+		textureName = "FX/Textures/ElectroBall01.tga"
 		textureSize = 256
 		elasticity = 0.0
 		addColor = <0.0, 0.0, 0.0>
@@ -27,7 +187,7 @@ Particles
 
 	Magic Electro Ball02
 	{
-		textureName = "FX/Textures/ElectroBall02.png"
+		textureName = "FX/Textures/ElectroBall02.tga"
 		textureSize = 256
 		elasticity = 0.0
 		addColor = <0.0, 0.0, 0.0>

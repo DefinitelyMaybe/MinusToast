@@ -13,8 +13,8 @@ GameObjects
 			
 			Script
 			{
-				file = "Scripts/Objects/Effects/NewProjectile.lua"
-				class = "NewProjectile"
+				file = "Scripts/Objects/Effects/ElectroProjectile.lua"
+				class = "ElectroProjectile"
 
 				arguments
 				{
@@ -89,11 +89,16 @@ GameObjects
 			
 			Children
 			{
-				Magic Electro Ball Green Emitter
+				Magic Electro Emitter
 				{
 					offset = <0.0, 0.0, 0.0>
 				}
-				Lightning Bolts Green Emitter
+				FireBall Attractor
+				{
+					offset = <0.0, 0.0, 0.0>
+					emitter = "Magic Electro Emitter"
+				}
+				Magic Electro Trail Emitter
 				{
 					offset = <0.0, 0.0, 0.0>
 				}
