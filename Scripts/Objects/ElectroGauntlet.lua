@@ -2,13 +2,6 @@ include("Scripts/Objects/Gauntlet.lua")
 
 ElectroGauntlet = Gauntlet.Subclass("ElectroGauntlet")
 
---[[ElectroGauntlet.Models = {}
-ElectroGauntlet.Models[1] = NKLoadStaticModel("Data/eyes.txt")--]]
-
-ElectroGauntlet.Effect = {
-	"Projectiles/Electro.txt"
-}
-
 ElectroGauntlet.Emitters = {
 	"Magic Electro Emitter",
 	"FireBall Attractor",
@@ -22,18 +15,13 @@ ElectroGauntlet.RegisterScriptEvent("ClientEvent_Channeling",
 	}
 )
 
---function ElectroGauntlet:PostLoad(dt) 
---	ElectroGauntlet.__super.PostLoad(self, dt)
---end
-
 -------------------------------------------------------------------------------
 function ElectroGauntlet:Constructor(args)
 	self.m_id = 1
 	self.m_charging = false
 	self.m_emittersRunning = false
-	self.m_emitter1 = nil
-	self.m_emitter2 = nil
-	self.m_emitter3 = nil
+	self.m_emitters = {}
+	self.m_effect = nil
 end
 
 -------------------------------------------------------------------------------
@@ -46,11 +34,8 @@ function ElectroGauntlet:GearPrimaryAction(args)
 	
 	-- Check stance
 	if player:InCastingStance() and (not self.m_persistent or not self.m_currentProjectile) then
-		
-		
-		
-		
-		local effectArgs = NKParseFile( "Data/Effects/".. ElectroGauntlet.Effect[self.m_id] )
+	
+		local effectArgs = NKParseFile( "Data/Effects/Projectiles/Electro.txt")
 		
 		local projectileData = self:GetProjectileData()
 		local facingRot = GLM.Angle(args.direction, NKMath.Right)
@@ -70,11 +55,10 @@ function ElectroGauntlet:GearPrimaryAction(args)
 			offset = projectileData.m_offset,
 			source = player,
 		}
-		
-		--local chargeArgs = effect:Charge()
-		--if chargeArgs[1] then
 
-		effect:Fire(throwablePayload, args.direction, 15, player)
+		self.m_effect = effect
+		self.m_charging = true
+		--effect:Fire(throwablePayload, args.direction, 15, player)
 		
 		-- type is persistent, set currentProjectile
 		if self.m_persistent then
@@ -101,59 +85,41 @@ end
 -------------------------------------------------------------------------------
 function ElectroGauntlet:Update( dt )
 	ElectroGauntlet.__super.Update(self, dt)
-	
-	if self.m_player ~= nil then
-		if not self.m_player:InCastingStance() and self.m_emittersRunning then
-			for i = 1, 3 do
-				self.m_player:NKDeactivateEmitterByName(self.Emitters[i])
-				self.m_player:NKRemoveChildObject(self["m_emitter"..tostring(i)])
-				self["m_emitter"..tostring(i)]:NKDeleteMe()
-			end
-			self.m_emittersRunning = false
-		end
-	end
-	
-	--if self.m_charging then
-		--local currentScale = effect:NKGetScale()
-		--if currentScale > 2.5 then
-		--	effect:NKScale(currentScale + 0.5)
-		--end
-	--end
-end
 
--------------------------------------------------------------------------------
---function ElectroGauntlet:OnGearEquipped( player )
---	ElectroGauntlet.__super.OnGearEquipped(self, player)
---
---end
+		
+	if self.m_charging then
+
+	end
+end
 
 -------------------------------------------------------------------------------
 function ElectroGauntlet:ServerEvent_Aim(args)
 	ElectroGauntlet.__super.ServerEvent_Aim(self, args)
-	
-	--NKWarn("charging")
-	--self.m_charging = true
-	
-	for i = 1, 3 do
-		self["m_emitter"..tostring(i)] = Eternus.GameObjectSystem:NKCreateGameObject(self.Emitters[i], true)
-		self["m_emitter"..tostring(i)]:NKSetShouldSave(false)
-		self["m_emitter"..tostring(i)]:NKSetPosition(self.m_player:NKGetWorldPosition())
-		self.m_player:NKAddChildObject(self["m_emitter"..tostring(i)])
-		self["m_emitter"..tostring(i)]:NKPlaceInWorld(true, false)
-		self.m_player:NKActivateEmitterByName(self.Emitters[i])
-		
-	end
-	self.m_emittersRunning = true
-	
-	-- Emitters get turned off. Have to detect if still Aiming or not
+
 end
 
 -------------------------------------------------------------------------------
---function ElectroGauntlet:ServerEvent_CancelCasting(args)
---	ElectroGauntlet.__super.ServerEvent_CancelCasting(self, args)
---	
---	
---end
+function ElectroGauntlet:StartEmitters(player)
+	for emitterID, emitterName in ipairs(self.Emitters) do
+        self.m_emitters[emitterID] = Eternus.GameObjectSystem:NKCreateGameObject(emitterName, true)
+        self.m_emitters[emitterID]:NKSetShouldSave(false)
+        self.m_emitters[emitterID]:NKSetPosition(player:NKGetWorldPosition())
+        player:NKAddChildObject(self.m_emitters[emitterID])
+        self.m_emitters[emitterID]:NKPlaceInWorld(true, false)
+        player:NKActivateEmitterByName(emitterName)
+    end
+	self.m_emittersRunning = true
+end
+
+-------------------------------------------------------------------------------
+function ElectroGauntlet:StopEmitters(player)
+	for emitterID, emitterName in ipairs(self.Emitters) do
+		player:NKDeactivateEmitterByName(self.Emitters[i])
+		player:NKRemoveChildObject( self.m_emitters[emitterID])
+		self.m_emitters[emitterID]:NKDeleteMe()
+    end
+	self.m_emittersRunning = false
+end
 
 -------------------------------------------------------------------------------
 --function logToFile(message, file, mode)

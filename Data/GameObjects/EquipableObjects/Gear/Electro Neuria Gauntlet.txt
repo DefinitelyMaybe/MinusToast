@@ -25,16 +25,16 @@
 					emptyContainer = "Bronze Plated Glove"
 					energyUsed = 0 #15
 					spellName = "Electro"
-					spellIcon = "TUGIcons/firespell_icon"
+					spellIcon = "TUGIcons/frostspell_icon"
 					
 					#These are from Ice Neuria Gaunlet and I thought they might be helpful
 					persistent = 1
 					#amount of time between ticks
 					castingTimerTick = 1.0
 					#energy used per tick
-					energyPerTick = 15
+					energyPerTick = 0
 					#durability damage per tick
-					durabilityPerTick = 0.4
+					durabilityPerTick = 0.0
 
 					castingSound = "FireballCast"
 					endCastingSound = "FireballEndCast"
@@ -118,7 +118,7 @@
 			Placeable
 			{
 				name = "Electro Neuria Gauntlet"
-				icon = "fireball_neuria_Gauntlet_icon"
+				icon = "Ice_Blast_neuria_Gauntlet_1_icon"
 				minScale = 1.0
 				maxScale = 1.0
 				
