@@ -17,7 +17,7 @@ function ElectroProjectile:Constructor( args )
 end
 
 -------------------------------------------------------------------------------
-function ElectroProjectile:Fire(payload, direction, force)
+function ElectroProjectile:Fire(payload, direction, force, player)
 	if payload ~= nil then
 		self:SetSource(payload.source)
 	end
@@ -39,9 +39,11 @@ function ElectroProjectile:Stop()
 	end
 end
 
+-------------------------------------------------------------------------------
 function ElectroProjectile:NetSerializeConstruction( stream )
 end
 
+-------------------------------------------------------------------------------
 function ElectroProjectile:NetDeserializeConstruction( stream )
 end
 

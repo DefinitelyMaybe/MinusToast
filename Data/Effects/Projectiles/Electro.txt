@@ -1,4 +1,4 @@
-Electro
+Electro Projectile
 {
 
 	Handlers

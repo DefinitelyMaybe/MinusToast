@@ -22,9 +22,9 @@ ElectroGauntlet.RegisterScriptEvent("ClientEvent_Channeling",
 	}
 )
 
-function ElectroGauntlet:PostLoad(dt) 
-	ElectroGauntlet.__super.PostLoad(self, dt)
-end
+--function ElectroGauntlet:PostLoad(dt) 
+--	ElectroGauntlet.__super.PostLoad(self, dt)
+--end
 
 -------------------------------------------------------------------------------
 function ElectroGauntlet:Constructor(args)
@@ -41,9 +41,10 @@ function ElectroGauntlet:GearPrimaryAction(args)
 	if ElectricGauntlet_DEBUGGING then
 		NKWarn(">> [ElectroGauntlet] ElectroGauntlet:GearPrimaryAction() " .. (self.m_player and "has Player" or "Missing Player") )
 	end
+
 	local player = args.player
 	
-	-- Check stance 
+	-- Check stance
 	if player:InCastingStance() and (not self.m_persistent or not self.m_currentProjectile) then
 		
 		
@@ -69,7 +70,11 @@ function ElectroGauntlet:GearPrimaryAction(args)
 			offset = projectileData.m_offset,
 			source = player,
 		}
-		effect:Fire(throwablePayload, args.direction, 15)
+		
+		--local chargeArgs = effect:Charge()
+		--if chargeArgs[1] then
+
+		effect:Fire(throwablePayload, args.direction, 15, player)
 		
 		-- type is persistent, set currentProjectile
 		if self.m_persistent then
@@ -108,26 +113,26 @@ function ElectroGauntlet:Update( dt )
 		end
 	end
 	
-	if self.m_charging then
+	--if self.m_charging then
 		--local currentScale = effect:NKGetScale()
 		--if currentScale > 2.5 then
 		--	effect:NKScale(currentScale + 0.5)
 		--end
-	end
+	--end
 end
 
 -------------------------------------------------------------------------------
-function ElectroGauntlet:OnGearEquipped( player )
-	ElectroGauntlet.__super.OnGearEquipped(self, player)
-
-end
+--function ElectroGauntlet:OnGearEquipped( player )
+--	ElectroGauntlet.__super.OnGearEquipped(self, player)
+--
+--end
 
 -------------------------------------------------------------------------------
 function ElectroGauntlet:ServerEvent_Aim(args)
 	ElectroGauntlet.__super.ServerEvent_Aim(self, args)
 	
-	NKWarn("charging")
-	self.m_charging = true
+	--NKWarn("charging")
+	--self.m_charging = true
 	
 	for i = 1, 3 do
 		self["m_emitter"..tostring(i)] = Eternus.GameObjectSystem:NKCreateGameObject(self.Emitters[i], true)
@@ -144,18 +149,18 @@ function ElectroGauntlet:ServerEvent_Aim(args)
 end
 
 -------------------------------------------------------------------------------
-function ElectroGauntlet:ServerEvent_CancelCasting(args)
-	ElectroGauntlet.__super.ServerEvent_CancelCasting(self, args)
-	
-	
-end
+--function ElectroGauntlet:ServerEvent_CancelCasting(args)
+--	ElectroGauntlet.__super.ServerEvent_CancelCasting(self, args)
+--	
+--	
+--end
 
 -------------------------------------------------------------------------------
-function logToFile(message, file, mode)
- local file = io.open(file or "dev_log", mode or "a")
- file:write(tostring(message))
- file:close()
-end
+--function logToFile(message, file, mode)
+-- local file = io.open(file or "dev_log", mode or "a")
+-- file:write(tostring(message))
+-- file:close()
+--end
 
 -------------------------------------------------------------------------------
 EntityFramework:RegisterGameObject(ElectroGauntlet)

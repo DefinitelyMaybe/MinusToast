@@ -18,35 +18,218 @@ GameObjects
 
 				arguments
 				{
-				
 					CreakingSound = "ItemCreak"
 					BreakSound = "ItemBreak"
-					#DontInitilize = 1
-					#DeleteOnRestore = 1
+					
+					DeleteOnRestore = 1
+					
+					Projectile
+					{
+						handlerFile = "Scripts/Projectiles/ProjectileHandlerUpdate.lua"
+						handlerClass = "ProjectileHandlerUpdate"
+						speed = 40.0
+						contactProbeLength = 0.5
+
+						OnSpawn
+						{
+							Spawn
+							{
+							}
+						}
+						OnContact
+						{
+							Explode
+							{
+								player = 1
+								character = 1
+								gameObject = 1
+								terrain = 1
+							}
+						}
+						OnTimer
+						{
+							Explode
+							{
+								time = 2
+								active = 1
+								abortOnRemove = 1
+							}
+							BurnTerrain
+							{
+								time = 0.5
+								active = 0
+							}
+						}
+						OnTriggerTick
+						{
+							EffectOverTime
+							{
+								ticksPerSecond = 4
+								player = 1
+								character = 1
+								gameObject = 1
+							}
+							ObjectDamage
+							{
+								ticksPerSecond = 2
+								active = 1
+							}
+						}
+						OnDelete
+						{
+							Delete
+							{
+							}
+						}
+					}
+					Effects
+					{
+						Spawn
+						{
+						}
+						Delete
+						{
+							PlayBreakEmitter
+							{
+								#offset = <0.0, 0.0, 0.0>
+							}
+						}
+						ObjectDamage
+						{
+							RadiusDamage
+							{
+								radius = 7.0
+								characterDamage = 5
+								gameObjectDamage = 25
+								incorrectTierCap = 2
+								
+								Affects
+								{
+									"Rock" = 2
+									"Ore" = 2
+									"Metal" = 2
+									"Wood" = 2
+									"Vegetation" = 2
+									"Edible" = 2
+								}
+							}
+						}
+						EffectOverTime
+						{
+							TargetBuff
+							{
+								SpeedBuff
+								{
+									class = "RunSpeedBuff"
+								
+									Data
+									{
+										duration = 3
+										value = 0.9
+										stacks = false
+									}
+
+									players = 1
+									characters = 1
+								}
+								FireDebuff
+								{
+									class = "FireDebuff"
+								
+									Data
+									{
+										duration = 3
+										damage = 5
+										ticksPerSecond = 2
+										stacks = false
+									}
+								
+									players = 1
+									characters = 1
+								}
+							}
+						}
+						Explode
+						{
+							RadiusDamage
+							{
+								radius = 5.0
+								playerDamage = 15
+								characterDamage = 50
+								gameObjectDamage = 100
+								incorrectTierCap = 2
+								
+								Affects
+								{
+									"Rock" = 2
+									"Ore" = 2
+									"Metal" = 2
+									"Wood" = 2
+									"Vegetation" = 2
+									"Edible" = 2
+								}
+							}
+							TerrainDamage
+							{
+								radius = 2.0
+							}
+							TriggersActivate
+							{
+							}
+							SpawnEmitter
+							{
+								Magic FireBall Burnt Emitter
+								{
+									deactivateTimer = 8.0
+								}
+							}
+							EmitterDeactivate
+							{
+								Magic FireBall Emitter
+								{
+								}
+								Magic FireBall Trail Emitter
+								{
+								}
+							}
+							PlayEmitter
+							{
+								Magic FireBall Explosion Emitter
+								{
+								}
+							}
+							PlaySound
+							{
+								Explosion Sound
+								{
+									name = "FireballExplosion"
+									minDist = 10
+									maxDist = 100
+								}
+							}
+							SetTimer
+							{
+								BurnTerrain
+								{
+									activate = 1
+								}
+							}
+							RemoveProjectile
+							{
+							}
+						}
+						BurnTerrain
+						{
+							TerrainSwap
+							{
+								radius = 4.0
+								material = "Burnt"
+							}
+						}
+					}
 				}
 			}
 
-			Placeable
-			{
-				name = "Electro Projectile"
-				//icon = "crystalClusterRuby"
-				minScale = 1.0
-				maxScale = 2.5
-				category = "Weapon"
-				resource = 1
-				tier = 3
-
-				damageToCharacters = 19
-				damageToObjects = 7
-				weaponRange = 7.0
-				maxStackCount = 100
-
-				impactFailSound = "MetalDig"
-				miningEmitter = "Slingshot Stone Break Emitter"
-
-				handleType = "one"
-			}
-			
 			#StaticGraphics
 			#{
 			#	model = "Character/Weapons/fireball.obj"
@@ -79,7 +262,24 @@ GameObjects
 					}
 				}
 			}
-			
+			Placeable
+			{
+				name = "Electro Projectile"
+				//icon = "crystalClusterRuby"
+				minScale = 1.0
+				maxScale = 2.0
+				
+				category = "Weapon"
+				tier = 3
+				maxStackCount = 100
+				resource = 1
+				weaponRange = 7.0
+
+				miningEmitter = "Slingshot Stone Break Emitter"
+				impactFailSound = "MetalDig"
+
+				handleType = "one"
+			}
 			Light
 			{
 				lightRadius = 1.0
@@ -93,11 +293,11 @@ GameObjects
 				{
 					offset = <0.0, 0.0, 0.0>
 				}
-				FireBall Attractor
-				{
-					offset = <0.0, 0.0, 0.0>
-					emitter = "Magic Electro Emitter"
-				}
+				#FireBall Attractor
+				#{
+				#	offset = <0.0, 0.0, 0.0>
+				#	emitter = "Magic Electro Emitter"
+				#}
 				Magic Electro Trail Emitter
 				{
 					offset = <0.0, 0.0, 0.0>
