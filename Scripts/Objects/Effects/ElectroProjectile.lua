@@ -22,7 +22,7 @@ function ElectroProjectile:Fire(payload, direction, force, player)
 		self:SetSource(payload.source)
 	end
 	if Eternus.IsServer then
-		self:ChangeHandler("Trajectory")
+		self:ChangeHandler("Attached")
 		
 		self.m_fired = true
 		if self.m_handler and self.m_handler.Fire then

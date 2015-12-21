@@ -58,7 +58,7 @@ function ElectroGauntlet:GearPrimaryAction(args)
 
 		self.m_effect = effect
 		self.m_charging = true
-		--effect:Fire(throwablePayload, args.direction, 15, player)
+		effect:Fire(throwablePayload, args.direction, 15, player)
 		
 		-- type is persistent, set currentProjectile
 		if self.m_persistent then

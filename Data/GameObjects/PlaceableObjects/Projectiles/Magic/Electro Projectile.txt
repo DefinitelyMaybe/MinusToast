@@ -21,6 +21,20 @@ GameObjects
 					CreakingSound = "ItemCreak"
 					BreakSound = "ItemBreak"
 					
+					Handlers
+					{
+						Attached
+						{
+							Default = 1
+							handlerClass = "HandlerAttached"
+							arguments
+							{
+								speed = 0.5
+								offset = <2.0, 0.0, 0.0>
+							}
+						}
+					}
+					
 				}
 			}
 
